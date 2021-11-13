@@ -47,10 +47,10 @@ class Main {
                 if (raversedWordMatch(traversedWord)) {
                     if (e.detail.isBot) {
                         alert('You Lost, refresh the Page to change difficulty');
-                        self.restart();
                     } else {
                         alert('You Won.')
                     }
+                    self.restart();
                 } else {
                     changeTurn(!e.detail.isBot)
                 }
