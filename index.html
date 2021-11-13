@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoLish</title>
+
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+
+    <div class="game hidden">
+        <div class="turn">
+            <input type="checkbox" hidden disabled name="turn" id="turnCheckBox" />
+            <label for='turnCheckBox'></label>
+        </div>
+        <div class="words"></div>
+        <div class="word-input">
+            <div class="inputs">
+                <input type="text" id="word_input_1" maxlength="1" data-id="0" />
+                <input type="text" id="word_input_2" maxlength="1" data-id="1" />
+                <input type="text" id="word_input_3" maxlength="1" data-id="2" />
+                <input type="text" id="word_input_4" maxlength="1" data-id="3" />
+                <input type="text" id="word_input_5" maxlength="1" data-id="4" />
+            </div>
+            <button disabled>Check</button>
+        </div>
+    </div>
+
+    <div class="menu">
+        <h1>Select Difficulty</h1>
+        <div class="select-difficulty">
+            <input type="radio" name="difficulty" value="1" id="difficulty_radio_1" />
+            <label for="difficulty_radio_1">Easy</label>
+            <input type="radio" name="difficulty" value="2" id="difficulty_radio_2" />
+            <label for="difficulty_radio_2">Normal</label>
+            <input type="radio" name="difficulty" value="3" id="difficulty_radio_3" />
+            <label for="difficulty_radio_3">Hard</label>
+        </div>
+        <button id="startbtn" disabled>Start</button>
+    </div>
+
+    <script src="./utills.js"></script>
+    <script src="./input.js"></script>
+    <script src="./bot.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    outline: none;
+    list-style: none;
+    text-align: right;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+button {
+    background-color: #e67e22;
+    font-size: 2em;
+    border: none;
+    color: #fff;
+    padding: 0.25em 1.25em;
+    text-transform: uppercase;
+    border-radius: 12px;
+    cursor: pointer;
+}
+button:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+body {
+    background: #4b6cb7;
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+    background: linear-gradient(to right, #182848, #4b6cb7);
+}
+
+.menu {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding-top: 20vh;
+    transition: opacity 0.2s;
+}
+.menu button {
+    margin: 5em 0 0;
+}
+
+.menu h1 {
+    margin: 1em 0;
+}
+
+.select-difficulty {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-difficulty input {
+    display: none;
+}
+
+.select-difficulty label {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: 0.2s all;
+    border: 2px solid transparent;
+    border-radius: 12px;
+}
+.select-difficulty label:hover {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.select-difficulty input:checked + label {
+    border: 2px solid #fff;
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 65% 25%;
+    transition: opacity 0.2s;
+}
+
+.green {
+    color: #2ecc71;
+    font-weight: bold;
+}
+.orange {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.words {
+    width: 50vw;
+    margin: 0 auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.word {
+    background: #fff;
+    display: inline-flex;
+    padding: 0.15em 0.5em;
+    font-size: 2em;
+    border-radius: 12px;
+}
+
+.word.bot {
+    margin-left: auto;
+}
+
+.inputs,
+.word-input {
+    text-align: center;
+}
+
+.inputs input {
+    width: 2rem;
+    font-size: 2em;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid currentColor;
+    text-align: center;
+    margin: 0 0.35em 1.5em;
+}
+.inputs input:disabled{
+    opacity: 0.5;
+}
+
+
+.turn {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    margin: 0 auto 0;
+    position: relative;
+}
+.turn label {
+    width: 2em;
+    height: 2em;
+    background-color: #e67e22;
+    -webkit-box-shadow: 0px 0px 16px 15px rgb(230 126 34 / 90%);
+    -moz-box-shadow: 0px 0px 16px 15px rgb(230 126 34 / 90%);
+    box-shadow: 0px 0px 16px 15px rgb(230 126 34 / 90%);
+    animation: grow 2.5s infinite;;
+    border-radius: 50%;
+    left: 0;
+    transition: left .5s;
+    position: absolute;
+}
+
+.turn input:checked + label{
+    left: calc(100% - 2em);
+}
+
+
+@keyframes grow {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
